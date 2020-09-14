@@ -1,0 +1,71 @@
+yıldızları anlama
+gezegenler arasındakii mesafeyi bulma
+yeni parçacıklar keşfetme
+dna dizilimlerini analiz etme
+kanser türlerinin kişiye göre analizi ?
+
+yüz tsnıma 2001'e kadar çözülememiş bir problemdi
+normal algoritma ile yüz tnıma yapılamamış
+
+veri setinin çıktıları ibliniyosa supervised öğrenme kullanılır
+
+denetimli: bu öğrenme çeşidinde bir insandan yardım alınmadan algoritma oluşturulamaz
+
+blog konularını öğrenmek, müşterileri gruplamak, anormal web işlemleri
+
+veriyi analize uygun hale getirme: veri önişleme
+veri temizleme. tutarsız veriler kaldırılır
+veri bütünkeştirme: birden fazla veri birleştirilir
+veri dönüştürme: uygun formatlara fönüştürüülür
+veri indirgeme: boyut sayısı azaltılır
+
+scikit-learn'ü spotify, evernote, booking.com gibi ünlü şirketler kullanıyor
+
+istatistiksel grafikler istersen: seaborn daha çok önerilir. matplotlib ile çalışan ve pd ile daha uyumlu olan bir kütüphanedir
+
+%matplotlib inline
+%matplotlib notebook
+
+ml çeşitleri:
+1- supervised 2- unsupervised 3- reinforcement
+Supervised çeşitleri: # en yakın kullanılan ml çeşidi bu # bunda eğitim verisini oluşturmak için insan yardımı gerekli
+1. k- en yakın komşuluğu 
+2. Doğrusal regresyon: ml algoritmaları arasında en kolayı ve en sık kullanılanı bu
+3. lojistik regresyon: bu teknikte bağımlı değişken evet/hayır veya 0/1 gibi ikili yapıdadır. regresyon olsa da sınıflandırma için
+kullanılır. ismine bakarak regresyon algoritması olduğunu düşünmeyin. bir sınıflandırma algoritmasıdır
+4. destek vektör makinaları (dvm)
+5. karar ağaçları
+6. random forests
+7. sinir ağları
+
+regresyon üçe ayrıılır: lineer, polinomsal, lojistik
+hedef değişken sayısal ve bağımsız değişkenle arassında doğrusal bi ilişki varsa lineer regresyon analizi;
+hedef değişken sayısal ama bağımsız değişkenle arasında lineer bi ilişki yoksa  polinomsal regresyon;
+hedef değişken kategorik ise lojistik regresyon analizi kullanılır.
+
+lojistik regresyonun da çeşitleri vardır: ikili lojistik (evet hayır gibi), çoklu lojistik (ikiden fazla),
+sıralı lojistik regresyon analizi (bebek, çocuk, yaşlı gibi)
+
+lineer model sınıflandırma için de yaygın bi şekilde kullanılır
+
+girdiler: bağımsız değişken. sonuç: bağımlı değişken
+veri biliminde girdi: öznitelik (feature) (genelde matris yapısında) çıktı: hedef (target) (genelde vektör yapısında)
+
+bir de nonlinear regresyon var: bunda bağımlı ile bağımsız değişken arasında polinomsal bir ilişki aranır. bu yönteme polinomsal
+regresyon da denir
+
+reinforcement: 
+- çevreyle ilişki kurarak karar alma performansı geliştirilir. bir aksyion seçilerek uygulanır, karşılığında ödül veya
+ceza alınır. böylece policy denen en iyi strateji öğrenilir
+- birçok robot nasıl yürüyeceğini öğrenmek için bu tekniği kullanır
+- alpha go bu teknikle 2016 yılında dünya şampiyonunu yendi
+
+Unsupervised: (öğretmensiz)
+
+- gruplama
+- boyut indirgeme:çok fazla bilgi kaybetmeden veriyi sadeleştirmek. bunu yapmak için birkaç öznitelik birleştirilebilir
+örneğin bir arbanınn yakıt tüketimi onun yaşıyla çok ilişkili olabilir. algoritma bu ikisini birleştirebilri
+bu teknik olunca daha hızlı çalışılır, bellekte daha az yer tutar, hatta bazı durumlarda modelin performansını ibke artırabilir
+bu teknişk veriyi görselleştirmek için de kullanılabilir. böylece saçılım veya histogram grafikleri daha klay çizilir
+
+eğitim için cross validation ve hiperparametre gibi teknikler kullanılır, ardından en iyi model seçilir
