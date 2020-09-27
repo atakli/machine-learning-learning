@@ -11,7 +11,7 @@ print(train.data[5])
 # 20 farklı konuda haber yazıları içeriyor
 # bu veri setini makin eöğrenesinde kullanmak için herbir stringin içeriğini bir sayısal vektöre çevirmemiz gerekiyor
 from sklearn.feature_extraction.text import TfidfVectorizer
-# çok kategorili naive bayes sınıfını imğport edelim:
+# çok kategorili naive bayes sınıfını import edelim:
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import make_pipeline
 model = make_pipeline(TfidfVectorizer(),MultinomialNB())

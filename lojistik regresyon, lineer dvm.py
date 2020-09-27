@@ -1,4 +1,4 @@
-# Ridge denilen L2 regülerleştirmesi her iki modelde de (LİnearSVC ve LogisticRegression) öntanımlı olarak uygulanır
+# Ridge denilen L2 regülerleştirmesi her iki modelde de (LinearSVC ve LogisticRegression) öntanımlı olarak uygulanır
 # modedec argümanı regülerleştirme baskısını belirler
 # c'nin yüksek değeri daha az regülerleştirme yapar
 # c'nin düşük değeri katsayıları 0'a yakınlaştırmak için baskı yapar, dolayısıyla daha çok regülerleştirme olur
@@ -17,7 +17,7 @@ print(logreg.score(X_egitim,y_egitim))
 print(logreg.score(X_test,y_test))
 # 0.9553990610328639
 # 0.951048951048951
-# bu değerler birbirine çok yakın olduğu için muhtremelen modelde underfitting var
+# bu değerler birbirine çok yakın olduğu için muhtemelen modelde underfitting var
 # bu durumun üstesinden gelmek için c'yi 100 yapalım
 logreg100 = LogisticRegression(C=100,solver='liblinear').fit(X_egitim,y_egitim)
 print(logreg100.score(X_egitim,y_egitim))
@@ -26,7 +26,8 @@ print(logreg100.score(X_test,y_test))
 # 0.965034965034965
 # eğitim ve test verisindeki performansı yükseldi, C'nin değerini yükselttiğimizde model daha iyi çalıştı
 # C'nin değerini büyüterek regülerleştirmeyi azalttık
-# böylece modelin eğitim verisindeli doğruluğu arttı, test verisinde ise hafif bir artış oldu (aslında eğitim skoru tutorial'da 0.9765...)
+# böylece modelin eğitim verisindeli doğruluğu arttı, test verisinde ise hafif bir artış oldu 
+# (aslında eğitim skoru tutorial'da 0.9765...) # birkaç gün sonra kendimde tekrar çalıştırdım, bende de farklı oldu.
 # bi de C'yi düşürelim
 logreg001 = LogisticRegression(C=0.01,solver='liblinear').fit(X_egitim,y_egitim) 
 print(logreg001.score(X_egitim,y_egitim)) 
@@ -36,7 +37,7 @@ print(logreg001.score(X_test,y_test))
 # regülerleştirme argümanını azalttığımız zaman beklediğimiz gibi hem eğitim hem test doğruluk değerleri düştü
 # şimdi C'nin aldığı değerlere göre modellerin öğrendiği katsayıları grafikte görelim:
 # (grafiğin kodunu göstermedi)
-# C=0.001 durumunda regülerleştirme arttığı için çoğu katsay 0'a oldukça yaklaşmış. C arttıkça regülerleştirme azalıyor
+# C=0.001 durumunda regülerleştirme arttığı için çoğu katsayı 0'a oldukça yaklaşmış. C arttıkça regülerleştirme azalıyor
 for C, marker in zip([0.01,1,100],['o','^','v']):
     lr_l1 = LogisticRegression(penalty='l1',max_iter=1000,solver='liblinear',C=C).fit(X_egitim,y_egitim)
 	# max_iter'i yazmayınca uyarı veriyo. arttırmamız isteniyo
@@ -50,7 +51,8 @@ for C, marker in zip([0.01,1,100],['o','^','v']):
 # C=100.000 için test doğruluk 0.98
 # C'nin 0.01 değeri için regülerleştirmenin arttığını ve modelin Lineer Regresyona yaklaştığını görüyoruz
 ### ÇOKLU SINIFLANDIRMA
-# birçok lineer sınıflandırma mıodeli ikili sınıfladırma için kullanılır. Logistic Regresyon hariç ikili sınıflandırma direk olarak çok kategorili sınıflandırmaya genişletilemez
+# birçok lineer sınıflandırma modeli ikili sınıfladırma için kullanılır. 
+# Logistic Regresyon hariç ikili sınıflandırma direk olarak çok kategorili sınıflandırmaya genişletilemez
 # bu genişletme için ban-rez tekniği kullanılır
 # bu teknikte herbir sınıf diğer bütün sınıflardan ayrılmayı dener
 # 3 kategorili bir veri seti için bu tekniği uygulayalım

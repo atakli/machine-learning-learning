@@ -4,10 +4,10 @@ yeni parçacıklar keşfetme
 dna dizilimlerini analiz etme
 kanser türlerinin kişiye göre analizi ?
 
-yüz tsnıma 2001'e kadar çözülememiş bir problemdi
-normal algoritma ile yüz tnıma yapılamamış
+yüz tanıma 2001'e kadar çözülememiş bir problemdi
+normal algoritma ile yüz tanıma yapılamamış
 
-veri setinin çıktıları ibliniyosa supervised öğrenme kullanılır
+veri setinin çıktıları biliniyosa supervised öğrenme kullanılır
 
 denetimli: bu öğrenme çeşidinde bir insandan yardım alınmadan algoritma oluşturulamaz
 
@@ -25,6 +25,11 @@ istatistiksel grafikler istersen: seaborn daha çok önerilir. matplotlib ile ç
 
 %matplotlib inline
 %matplotlib notebook
+
+# An estimator is any object that learns from data; 
+# it may be a classification, regression or clustering algorithm 
+# or a transformer that extracts/filters useful features from raw data.
+# All estimator objects expose a fit method that takes a dataset (usually a 2-d array):
 
 ml çeşitleri:
 1- supervised 2- unsupervised 3- reinforcement
@@ -69,3 +74,4 @@ bu teknik olunca daha hızlı çalışılır, bellekte daha az yer tutar, hatta 
 bu teknişk veriyi görselleştirmek için de kullanılabilir. böylece saçılım veya histogram grafikleri daha klay çizilir
 
 eğitim için cross validation ve hiperparametre gibi teknikler kullanılır, ardından en iyi model seçilir
+
