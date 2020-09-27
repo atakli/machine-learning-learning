@@ -47,3 +47,5 @@ model.score(X_test,y_test) 0.8333333333333334
 
 - mglearn.datasets.make_forge:
 # KNeighborsClassifier
+
+- load_breast_cancer:
