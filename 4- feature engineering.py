@@ -36,7 +36,7 @@ plt.plot(x,y_fit)
 # veriyi dönüştürerek modeli daha iyi hale getirebiliriz
 # böylece ekstra öznitelik sütunu ekleyerek modele esneklik kazandırabiliriz 
 from sklearn.preprocessing import PolynomialFeatures
-pol = PolynomialFeatures(degree=3, include_bias=False)
+pol = PolynomialFeatures(degree=3, include_bias=False) # 3'te baya iyi, 4'te tam 
 X2 = pol.fit_transform(X)
 X2
 model = LinearRegression().fit(X2,y)

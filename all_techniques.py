@@ -1,6 +1,7 @@
 - from sklearn.neighbors import KNeighborsClassifier
 - from sklearn.neighbors import KNeighborsRegressor
 - from sklearn.naive_bayes import GaussianNB
+- from sklearn.linear_model import LogisticRegression
 - from sklearn.linear_model import LinearRegression
 - from sklearn.linear_model import Ridge
 - from sklearn.linear_model import Lasso
@@ -39,6 +40,7 @@ bu da benzer. en son pd.DataFrame ile güzel hale geldi. ama bi eksiği var gibi
 # PolynomialFeatures
 LinearRegression yetmedi çünkü veri lineer değil. 3. dereceden PolynomialFeatures kullandık. hatta 4 olunca tam oldu.
 Öznitelik türetmiş olduk. unsupervised olabilir, ama not sure. hiçbişey de olmayabilir
+model.score(X2,y)	# 0.9975369458128079	# 4 olunca 1.0
 - rastgele ve nan veriler içeren veri:
 # SimpleImputer
 heralde unsupervised. eksik verileri tamamlıyo
@@ -59,6 +61,7 @@ snf.score(X_egitim,y_egitim) # 0.9473684210526315
 # KNeighborsClassifier
 snf.score(X_egitim,y_egitim) 	# 0.946
 snf.score(X_test,y_test)		# 0.937
+# LogisticRegression
 
 - mglearn.datasets.make_wave
 # KNeighborsRegressor
